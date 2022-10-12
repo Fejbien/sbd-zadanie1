@@ -15,7 +15,7 @@
     $db = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
 
     $sql = "SELECT `id`, `content` FROM `questions` WHERE 1";
-    if($res = $db->query($sqlQusqlestion)){
+    if($res = $db->query($sql)){
         while($row = $res->fetch_assoc()){
             echo "ID question: ".$row["id"]."<br>";
             echo "Content: ".$row["content"]."<br><br>";
@@ -23,7 +23,7 @@
     }
 
     $sql = "SELECT `id`, `content` FROM `answers` WHERE 1";
-    if($res = $db->query($sqlQusqlestion)){
+    if($res = $db->query($sql)){
         while($row = $res->fetch_assoc()){
             echo "ID answer: ".$row["id"]."<br>";
             echo "Content: ".$row["content"]."<br><br>";
